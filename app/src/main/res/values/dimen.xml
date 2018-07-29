@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widgets_height">30dp</dimen>
+    <dimen name="no_dimension">0dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="cv_margin">4dp</dimen>
+    <dimen name="imv_width">120dp</dimen>
+    <dimen name="imv_height">150dp</dimen>
+</resources>

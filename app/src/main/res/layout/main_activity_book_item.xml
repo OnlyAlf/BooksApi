@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="ActivityMainBinding"
+            type="com.example.alvar.books.Book"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cv_margin">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/book_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/book_item_logo"
+                    android:layout_width="@dimen/imv_width"
+                    android:layout_height="@dimen/imv_height"
+                    android:layout_marginBottom="@dimen/cv_margin"
+                    android:layout_marginEnd="@dimen/cv_margin"
+                    android:layout_marginLeft="@dimen/cv_margin"
+                    android:layout_marginRight="@dimen/cv_margin"
+                    android:layout_marginStart="@dimen/cv_margin"
+                    android:layout_marginTop="@dimen/cv_margin"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/file_missing"
+                    android:scaleType="centerCrop"
+                    android:bookImage="@{ActivityMainBinding.imageURL}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/book_item_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/book_item_title"
+                    android:layout_width="@dimen/no_dimension"
+                    android:layout_height="@dimen/no_dimension"
+                    android:textSize="@dimen/text_size"
+                    android:text="@{ActivityMainBinding.title}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/book_item_logo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>
